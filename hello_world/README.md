@@ -1,24 +1,20 @@
-# README
+Steps I took to create this project and launch it locally.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://iridakos.com/programming/2013/11/24/saying-hello-world-with-ruby-on-rails
 
-Things you may want to cover:
+1. type `rails new hello_world` to create rails project
+2. `rails generate controler pages` to create controller
+3. Went to `app/controllers/pages_controller.rb` - Added this code:
+   class PagesController < ApplicationController
+   def home
+   puts "Honey, I'm home!"
+   end
+   end
 
-* Ruby version
+4. Went to `app/views/pages` and pasted `<h1>Hello World</h1>`
 
-* System dependencies
+5. Went to `config/routes.rb` and added `root to: 'pages#home`.
 
-* Configuration
+6. Ran `rails server` to launch it locally.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+These steps work. Now I need to launch them on the Nimbella cloud.
